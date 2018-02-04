@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>json用法</title>
+    <script src="/static/js/jquery-1.12.4.min.js"></script>
+    <script>
+        $(function () {
+            var d=new Date();
+            $('#now11').text(d.getTime());
+
+            $('#btnShow').click(function () {
+                alert('调试');
+                $.get('/json2/',{'title':'hello'},function (data){//data表示返回的数据
+                    $('#show').html('<h1>'+data.h1+'</h1>');
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+<h1 id="now11"></h1>
+<input type="button" id="btnShow" value="显示">
+<div id="show"></div>
+</body>
+</html>

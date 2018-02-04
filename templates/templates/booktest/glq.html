@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>自定义过滤器</title>
+</head>
+<body>
+<ul>
+    {% for book in blist %}
+    {% if book.btitle|length > 4 %}
+    <li style="background-color: red;">{{ book.btitle }}--{{ book.bpub_date }}</li>
+    {% else %}
+    <li style="background-color: green;">{{ book.btitle }}--{{ book.bpub_date|date:'Y-m-j' }}</li>
+    {% endif %}
+    {% endfor %}
+</ul>
+<hr>
+{% load myfilters %}
+<ul>
+    {% for book in blist %}
+    {% if forloop.counter|mod %}
+    <li style="background-color: red;">{{ forloop.counter }}--{{ book.btitle }}--{{ book.bpub_date }}</li>
+    {% else %}
+    <li style="background-color: green;">{{ forloop.counter }}--{{ book.btitle }}--{{ book.bpub_date|date:'Y-m-j' }}</li>
+    {% endif %}
+    {% endfor %}
+</ul>
+<hr>
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{#<a href="/add/">添加</a>#}
+<span>测试测试</span>
+    <ul>
+        {% for book in blist %}
+           <li>{{ book.id }}--{{ book.btitle }}--<a href="/delete{{ book.id }}/">删除</a></li>
+            <li>{{ book.id }}--{{ book.btitle }}--></li>
+        {% endfor %}
+
+        {% for hero in hlist %}
+            <li>{{ hero.hname }}</li>
+        {% endfor %}
+    </ul>
+{#    <p>{{ reads.bread__sum }}</p>#}
+</body>
+</html>

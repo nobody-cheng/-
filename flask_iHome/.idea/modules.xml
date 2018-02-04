@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../../Flask-iHome__model/.idea/Flask-iHome.iml" filepath="$PROJECT_DIR$/../../Flask-iHome__model/.idea/Flask-iHome.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../TTSX/.idea/TTSX.iml" filepath="$PROJECT_DIR$/../../TTSX/.idea/TTSX.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/flask_Ihome.iml" filepath="$PROJECT_DIR$/.idea/flask_Ihome.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../test2/.idea/test2.iml" filepath="$PROJECT_DIR$/../test2/.idea/test2.iml" />
+    </modules>
+  </component>
+</project>

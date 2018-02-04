@@ -1,0 +1,8 @@
+cmd = 'cmd'
+uuid = 'uuid'
+name = 'name'
+online = 'online'
+offline = 'offline'
+onlineack = 'onlineack'
+setname = 'setname'
+msg = 'msg'

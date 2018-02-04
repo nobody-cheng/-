@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>macro模板及宏</title>
+</head>
+<body>
+<h1>闪现</h1>
+{% for msg in get_flashed_messages() %}
+<p>{{ msg }}</p>
+{% endfor %}
+{% macro input() %}
+    <input type="text" value="" size="22">
+{% endmacro %}
+
+<h2>input 不带参数的引用</h2>
+{{ input() }}
+<hr/>
+{% macro input2(type,value,size) %}
+    <input type="{{ type }}" value="{{ value }}" size="{{ size }}">
+{% endmacro %}
+
+<h2>带参数的引用</h2>
+{{ input2('text','',50) }}
+<hr/>
+
+{% macro input3(type='text',value='',size=60) %}
+    <input type='{{ type }}' value='{{ value }}' size='{{ size }}'>
+{% endmacro %}
+
+<h2>默认传参 input3</h2>
+{{ input3() }}
+
+<h2>默认传参 input3</h2>
+{{ input3('password','',100) }}
+<hr/>
+
+
+<h2>引入封装的宏单</h2>
+{% import 'macro_base.html' as ba %}
+<h2>macro_base</h2>
+{{ ba.base() }} //别名.引入函数名
+</body>
+</html>

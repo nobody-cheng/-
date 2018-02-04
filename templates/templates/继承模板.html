@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>继承模板</title>
+<script>
+    {% block head %}
+
+    {% endblock head %}
+    </script>
+</head>
+<body>
+<h1>top--{{ title }}</h1>
+<hr>
+{% block test %}
+    区域继承父类,父类的默认值,可通过block.super获取
+{% endblock test %}
+<hr>
+{% block body %}
+
+{% endblock body %}
+<hr>
+<h1>这是父类继承的尾部</h1>
+</body>
+</html>

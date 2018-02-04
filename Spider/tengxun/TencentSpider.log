@@ -1,0 +1,288 @@
+2017-12-17 11:43:24 [scrapy.core.scraper] ERROR: Spider error processing <GET http://hr.tencent.com/position.php?&start=10#a> (referer: http://hr.tencent.com/position.php?&start=0)
+Traceback (most recent call last):
+  File "/home/python/anaconda3/envs/anaconda_scrapy/lib/python3.6/site-packages/parsel/selector.py", line 222, in xpath
+    **kwargs)
+  File "src/lxml/etree.pyx", line 1589, in lxml.etree._Element.xpath (src/lxml/etree.c:61238)
+  File "src/lxml/xpath.pxi", line 307, in lxml.etree.XPathElementEvaluator.__call__ (src/lxml/etree.c:178777)
+  File "src/lxml/xpath.pxi", line 227, in lxml.etree._XPathEvaluatorBase._handle_result (src/lxml/etree.c:177729)
+lxml.etree.XPathEvalError: Invalid expression
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/python/anaconda3/envs/anaconda_scrapy/lib/python3.6/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/home/python/anaconda3/envs/anaconda_scrapy/lib/python3.6/site-packages/scrapy/spidermiddlewares/offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "/home/python/anaconda3/envs/anaconda_scrapy/lib/python3.6/site-packages/scrapy/spidermiddlewares/referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/home/python/anaconda3/envs/anaconda_scrapy/lib/python3.6/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/python/anaconda3/envs/anaconda_scrapy/lib/python3.6/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/python/anaconda3/envs/anaconda_scrapy/lib/python3.6/site-packages/scrapy/spiders/crawl.py", line 78, in _parse_response
+    for requests_or_item in iterate_spider_output(cb_res):
+  File "/home/python/Desktop/python/Spider/tengxun/tengxun/spiders/tencent.py", line 26, in parse_item
+    temp['position'] = item.xpath(".//td[1]/a/texx()").extract_first()
+  File "/home/python/anaconda3/envs/anaconda_scrapy/lib/python3.6/site-packages/parsel/selector.py", line 226, in xpath
+    six.reraise(ValueError, ValueError(msg), sys.exc_info()[2])
+  File "/home/python/anaconda3/envs/anaconda_scrapy/lib/python3.6/site-packages/six.py", line 692, in reraise
+    raise value.with_traceback(tb)
+  File "/home/python/anaconda3/envs/anaconda_scrapy/lib/python3.6/site-packages/parsel/selector.py", line 222, in xpath
+    **kwargs)
+  File "src/lxml/etree.pyx", line 1589, in lxml.etree._Element.xpath (src/lxml/etree.c:61238)
+  File "src/lxml/xpath.pxi", line 307, in lxml.etree.XPathElementEvaluator.__call__ (src/lxml/etree.c:178777)
+  File "src/lxml/xpath.pxi", line 227, in lxml.etree._XPathEvaluatorBase._handle_result (src/lxml/etree.c:177729)
+ValueError: XPath error: Invalid expression in .//td[1]/a/texx()
+2017-12-17 11:43:25 [scrapy.core.scraper] ERROR: Spider error processing <GET http://hr.tencent.com/position.php?&start=70#a> (referer: http://hr.tencent.com/position.php?&start=0)
+Traceback (most recent call last):
+  File "/home/python/anaconda3/envs/anaconda_scrapy/lib/python3.6/site-packages/parsel/selector.py", line 222, in xpath
+    **kwargs)
+  File "src/lxml/etree.pyx", line 1589, in lxml.etree._Element.xpath (src/lxml/etree.c:61238)
+  File "src/lxml/xpath.pxi", line 307, in lxml.etree.XPathElementEvaluator.__call__ (src/lxml/etree.c:178777)
+  File "src/lxml/xpath.pxi", line 227, in lxml.etree._XPathEvaluatorBase._handle_result (src/lxml/etree.c:177729)
+lxml.etree.XPathEvalError: Invalid expression
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/python/anaconda3/envs/anaconda_scrapy/lib/python3.6/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/home/python/anaconda3/envs/anaconda_scrapy/lib/python3.6/site-packages/scrapy/spidermiddlewares/offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "/home/python/anaconda3/envs/anaconda_scrapy/lib/python3.6/site-packages/scrapy/spidermiddlewares/referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/home/python/anaconda3/envs/anaconda_scrapy/lib/python3.6/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/python/anaconda3/envs/anaconda_scrapy/lib/python3.6/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/python/anaconda3/envs/anaconda_scrapy/lib/python3.6/site-packages/scrapy/spiders/crawl.py", line 78, in _parse_response
+    for requests_or_item in iterate_spider_output(cb_res):
+  File "/home/python/Desktop/python/Spider/tengxun/tengxun/spiders/tencent.py", line 26, in parse_item
+    temp['position'] = item.xpath(".//td[1]/a/texx()").extract_first()
+  File "/home/python/anaconda3/envs/anaconda_scrapy/lib/python3.6/site-packages/parsel/selector.py", line 226, in xpath
+    six.reraise(ValueError, ValueError(msg), sys.exc_info()[2])
+  File "/home/python/anaconda3/envs/anaconda_scrapy/lib/python3.6/site-packages/six.py", line 692, in reraise
+    raise value.with_traceback(tb)
+  File "/home/python/anaconda3/envs/anaconda_scrapy/lib/python3.6/site-packages/parsel/selector.py", line 222, in xpath
+    **kwargs)
+  File "src/lxml/etree.pyx", line 1589, in lxml.etree._Element.xpath (src/lxml/etree.c:61238)
+  File "src/lxml/xpath.pxi", line 307, in lxml.etree.XPathElementEvaluator.__call__ (src/lxml/etree.c:178777)
+  File "src/lxml/xpath.pxi", line 227, in lxml.etree._XPathEvaluatorBase._handle_result (src/lxml/etree.c:177729)
+ValueError: XPath error: Invalid expression in .//td[1]/a/texx()
+2017-12-17 11:43:25 [scrapy.core.scraper] ERROR: Spider error processing <GET http://hr.tencent.com/position.php?&start=2600#a> (referer: http://hr.tencent.com/position.php?&start=0)
+Traceback (most recent call last):
+  File "/home/python/anaconda3/envs/anaconda_scrapy/lib/python3.6/site-packages/parsel/selector.py", line 222, in xpath
+    **kwargs)
+  File "src/lxml/etree.pyx", line 1589, in lxml.etree._Element.xpath (src/lxml/etree.c:61238)
+  File "src/lxml/xpath.pxi", line 307, in lxml.etree.XPathElementEvaluator.__call__ (src/lxml/etree.c:178777)
+  File "src/lxml/xpath.pxi", line 227, in lxml.etree._XPathEvaluatorBase._handle_result (src/lxml/etree.c:177729)
+lxml.etree.XPathEvalError: Invalid expression
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/python/anaconda3/envs/anaconda_scrapy/lib/python3.6/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/home/python/anaconda3/envs/anaconda_scrapy/lib/python3.6/site-packages/scrapy/spidermiddlewares/offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "/home/python/anaconda3/envs/anaconda_scrapy/lib/python3.6/site-packages/scrapy/spidermiddlewares/referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/home/python/anaconda3/envs/anaconda_scrapy/lib/python3.6/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/python/anaconda3/envs/anaconda_scrapy/lib/python3.6/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/python/anaconda3/envs/anaconda_scrapy/lib/python3.6/site-packages/scrapy/spiders/crawl.py", line 78, in _parse_response
+    for requests_or_item in iterate_spider_output(cb_res):
+  File "/home/python/Desktop/python/Spider/tengxun/tengxun/spiders/tencent.py", line 26, in parse_item
+    temp['position'] = item.xpath(".//td[1]/a/texx()").extract_first()
+  File "/home/python/anaconda3/envs/anaconda_scrapy/lib/python3.6/site-packages/parsel/selector.py", line 226, in xpath
+    six.reraise(ValueError, ValueError(msg), sys.exc_info()[2])
+  File "/home/python/anaconda3/envs/anaconda_scrapy/lib/python3.6/site-packages/six.py", line 692, in reraise
+    raise value.with_traceback(tb)
+  File "/home/python/anaconda3/envs/anaconda_scrapy/lib/python3.6/site-packages/parsel/selector.py", line 222, in xpath
+    **kwargs)
+  File "src/lxml/etree.pyx", line 1589, in lxml.etree._Element.xpath (src/lxml/etree.c:61238)
+  File "src/lxml/xpath.pxi", line 307, in lxml.etree.XPathElementEvaluator.__call__ (src/lxml/etree.c:178777)
+  File "src/lxml/xpath.pxi", line 227, in lxml.etree._XPathEvaluatorBase._handle_result (src/lxml/etree.c:177729)
+ValueError: XPath error: Invalid expression in .//td[1]/a/texx()
+2017-12-17 11:43:25 [scrapy.core.scraper] ERROR: Spider error processing <GET http://hr.tencent.com/position.php?&start=30#a> (referer: http://hr.tencent.com/position.php?&start=0)
+Traceback (most recent call last):
+  File "/home/python/anaconda3/envs/anaconda_scrapy/lib/python3.6/site-packages/parsel/selector.py", line 222, in xpath
+    **kwargs)
+  File "src/lxml/etree.pyx", line 1589, in lxml.etree._Element.xpath (src/lxml/etree.c:61238)
+  File "src/lxml/xpath.pxi", line 307, in lxml.etree.XPathElementEvaluator.__call__ (src/lxml/etree.c:178777)
+  File "src/lxml/xpath.pxi", line 227, in lxml.etree._XPathEvaluatorBase._handle_result (src/lxml/etree.c:177729)
+lxml.etree.XPathEvalError: Invalid expression
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/python/anaconda3/envs/anaconda_scrapy/lib/python3.6/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/home/python/anaconda3/envs/anaconda_scrapy/lib/python3.6/site-packages/scrapy/spidermiddlewares/offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "/home/python/anaconda3/envs/anaconda_scrapy/lib/python3.6/site-packages/scrapy/spidermiddlewares/referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/home/python/anaconda3/envs/anaconda_scrapy/lib/python3.6/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/python/anaconda3/envs/anaconda_scrapy/lib/python3.6/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/python/anaconda3/envs/anaconda_scrapy/lib/python3.6/site-packages/scrapy/spiders/crawl.py", line 78, in _parse_response
+    for requests_or_item in iterate_spider_output(cb_res):
+  File "/home/python/Desktop/python/Spider/tengxun/tengxun/spiders/tencent.py", line 26, in parse_item
+    temp['position'] = item.xpath(".//td[1]/a/texx()").extract_first()
+  File "/home/python/anaconda3/envs/anaconda_scrapy/lib/python3.6/site-packages/parsel/selector.py", line 226, in xpath
+    six.reraise(ValueError, ValueError(msg), sys.exc_info()[2])
+  File "/home/python/anaconda3/envs/anaconda_scrapy/lib/python3.6/site-packages/six.py", line 692, in reraise
+    raise value.with_traceback(tb)
+  File "/home/python/anaconda3/envs/anaconda_scrapy/lib/python3.6/site-packages/parsel/selector.py", line 222, in xpath
+    **kwargs)
+  File "src/lxml/etree.pyx", line 1589, in lxml.etree._Element.xpath (src/lxml/etree.c:61238)
+  File "src/lxml/xpath.pxi", line 307, in lxml.etree.XPathElementEvaluator.__call__ (src/lxml/etree.c:178777)
+  File "src/lxml/xpath.pxi", line 227, in lxml.etree._XPathEvaluatorBase._handle_result (src/lxml/etree.c:177729)
+ValueError: XPath error: Invalid expression in .//td[1]/a/texx()
+2017-12-17 11:43:25 [scrapy.core.scraper] ERROR: Spider error processing <GET http://hr.tencent.com/position.php?&start=40#a> (referer: http://hr.tencent.com/position.php?&start=0)
+Traceback (most recent call last):
+  File "/home/python/anaconda3/envs/anaconda_scrapy/lib/python3.6/site-packages/parsel/selector.py", line 222, in xpath
+    **kwargs)
+  File "src/lxml/etree.pyx", line 1589, in lxml.etree._Element.xpath (src/lxml/etree.c:61238)
+  File "src/lxml/xpath.pxi", line 307, in lxml.etree.XPathElementEvaluator.__call__ (src/lxml/etree.c:178777)
+  File "src/lxml/xpath.pxi", line 227, in lxml.etree._XPathEvaluatorBase._handle_result (src/lxml/etree.c:177729)
+lxml.etree.XPathEvalError: Invalid expression
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/python/anaconda3/envs/anaconda_scrapy/lib/python3.6/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/home/python/anaconda3/envs/anaconda_scrapy/lib/python3.6/site-packages/scrapy/spidermiddlewares/offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "/home/python/anaconda3/envs/anaconda_scrapy/lib/python3.6/site-packages/scrapy/spidermiddlewares/referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/home/python/anaconda3/envs/anaconda_scrapy/lib/python3.6/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/python/anaconda3/envs/anaconda_scrapy/lib/python3.6/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/python/anaconda3/envs/anaconda_scrapy/lib/python3.6/site-packages/scrapy/spiders/crawl.py", line 78, in _parse_response
+    for requests_or_item in iterate_spider_output(cb_res):
+  File "/home/python/Desktop/python/Spider/tengxun/tengxun/spiders/tencent.py", line 26, in parse_item
+    temp['position'] = item.xpath(".//td[1]/a/texx()").extract_first()
+  File "/home/python/anaconda3/envs/anaconda_scrapy/lib/python3.6/site-packages/parsel/selector.py", line 226, in xpath
+    six.reraise(ValueError, ValueError(msg), sys.exc_info()[2])
+  File "/home/python/anaconda3/envs/anaconda_scrapy/lib/python3.6/site-packages/six.py", line 692, in reraise
+    raise value.with_traceback(tb)
+  File "/home/python/anaconda3/envs/anaconda_scrapy/lib/python3.6/site-packages/parsel/selector.py", line 222, in xpath
+    **kwargs)
+  File "src/lxml/etree.pyx", line 1589, in lxml.etree._Element.xpath (src/lxml/etree.c:61238)
+  File "src/lxml/xpath.pxi", line 307, in lxml.etree.XPathElementEvaluator.__call__ (src/lxml/etree.c:178777)
+  File "src/lxml/xpath.pxi", line 227, in lxml.etree._XPathEvaluatorBase._handle_result (src/lxml/etree.c:177729)
+ValueError: XPath error: Invalid expression in .//td[1]/a/texx()
+2017-12-17 11:43:25 [scrapy.core.scraper] ERROR: Spider error processing <GET http://hr.tencent.com/position.php?&start=50#a> (referer: http://hr.tencent.com/position.php?&start=0)
+Traceback (most recent call last):
+  File "/home/python/anaconda3/envs/anaconda_scrapy/lib/python3.6/site-packages/parsel/selector.py", line 222, in xpath
+    **kwargs)
+  File "src/lxml/etree.pyx", line 1589, in lxml.etree._Element.xpath (src/lxml/etree.c:61238)
+  File "src/lxml/xpath.pxi", line 307, in lxml.etree.XPathElementEvaluator.__call__ (src/lxml/etree.c:178777)
+  File "src/lxml/xpath.pxi", line 227, in lxml.etree._XPathEvaluatorBase._handle_result (src/lxml/etree.c:177729)
+lxml.etree.XPathEvalError: Invalid expression
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/python/anaconda3/envs/anaconda_scrapy/lib/python3.6/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/home/python/anaconda3/envs/anaconda_scrapy/lib/python3.6/site-packages/scrapy/spidermiddlewares/offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "/home/python/anaconda3/envs/anaconda_scrapy/lib/python3.6/site-packages/scrapy/spidermiddlewares/referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/home/python/anaconda3/envs/anaconda_scrapy/lib/python3.6/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/python/anaconda3/envs/anaconda_scrapy/lib/python3.6/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/python/anaconda3/envs/anaconda_scrapy/lib/python3.6/site-packages/scrapy/spiders/crawl.py", line 78, in _parse_response
+    for requests_or_item in iterate_spider_output(cb_res):
+  File "/home/python/Desktop/python/Spider/tengxun/tengxun/spiders/tencent.py", line 26, in parse_item
+    temp['position'] = item.xpath(".//td[1]/a/texx()").extract_first()
+  File "/home/python/anaconda3/envs/anaconda_scrapy/lib/python3.6/site-packages/parsel/selector.py", line 226, in xpath
+    six.reraise(ValueError, ValueError(msg), sys.exc_info()[2])
+  File "/home/python/anaconda3/envs/anaconda_scrapy/lib/python3.6/site-packages/six.py", line 692, in reraise
+    raise value.with_traceback(tb)
+  File "/home/python/anaconda3/envs/anaconda_scrapy/lib/python3.6/site-packages/parsel/selector.py", line 222, in xpath
+    **kwargs)
+  File "src/lxml/etree.pyx", line 1589, in lxml.etree._Element.xpath (src/lxml/etree.c:61238)
+  File "src/lxml/xpath.pxi", line 307, in lxml.etree.XPathElementEvaluator.__call__ (src/lxml/etree.c:178777)
+  File "src/lxml/xpath.pxi", line 227, in lxml.etree._XPathEvaluatorBase._handle_result (src/lxml/etree.c:177729)
+ValueError: XPath error: Invalid expression in .//td[1]/a/texx()
+2017-12-17 11:43:25 [scrapy.core.scraper] ERROR: Spider error processing <GET http://hr.tencent.com/position.php?&start=60#a> (referer: http://hr.tencent.com/position.php?&start=0)
+Traceback (most recent call last):
+  File "/home/python/anaconda3/envs/anaconda_scrapy/lib/python3.6/site-packages/parsel/selector.py", line 222, in xpath
+    **kwargs)
+  File "src/lxml/etree.pyx", line 1589, in lxml.etree._Element.xpath (src/lxml/etree.c:61238)
+  File "src/lxml/xpath.pxi", line 307, in lxml.etree.XPathElementEvaluator.__call__ (src/lxml/etree.c:178777)
+  File "src/lxml/xpath.pxi", line 227, in lxml.etree._XPathEvaluatorBase._handle_result (src/lxml/etree.c:177729)
+lxml.etree.XPathEvalError: Invalid expression
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/python/anaconda3/envs/anaconda_scrapy/lib/python3.6/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/home/python/anaconda3/envs/anaconda_scrapy/lib/python3.6/site-packages/scrapy/spidermiddlewares/offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "/home/python/anaconda3/envs/anaconda_scrapy/lib/python3.6/site-packages/scrapy/spidermiddlewares/referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/home/python/anaconda3/envs/anaconda_scrapy/lib/python3.6/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/python/anaconda3/envs/anaconda_scrapy/lib/python3.6/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/python/anaconda3/envs/anaconda_scrapy/lib/python3.6/site-packages/scrapy/spiders/crawl.py", line 78, in _parse_response
+    for requests_or_item in iterate_spider_output(cb_res):
+  File "/home/python/Desktop/python/Spider/tengxun/tengxun/spiders/tencent.py", line 26, in parse_item
+    temp['position'] = item.xpath(".//td[1]/a/texx()").extract_first()
+  File "/home/python/anaconda3/envs/anaconda_scrapy/lib/python3.6/site-packages/parsel/selector.py", line 226, in xpath
+    six.reraise(ValueError, ValueError(msg), sys.exc_info()[2])
+  File "/home/python/anaconda3/envs/anaconda_scrapy/lib/python3.6/site-packages/six.py", line 692, in reraise
+    raise value.with_traceback(tb)
+  File "/home/python/anaconda3/envs/anaconda_scrapy/lib/python3.6/site-packages/parsel/selector.py", line 222, in xpath
+    **kwargs)
+  File "src/lxml/etree.pyx", line 1589, in lxml.etree._Element.xpath (src/lxml/etree.c:61238)
+  File "src/lxml/xpath.pxi", line 307, in lxml.etree.XPathElementEvaluator.__call__ (src/lxml/etree.c:178777)
+  File "src/lxml/xpath.pxi", line 227, in lxml.etree._XPathEvaluatorBase._handle_result (src/lxml/etree.c:177729)
+ValueError: XPath error: Invalid expression in .//td[1]/a/texx()
+2017-12-17 11:43:25 [scrapy.core.scraper] ERROR: Spider error processing <GET http://hr.tencent.com/position.php?&start=20#a> (referer: http://hr.tencent.com/position.php?&start=0)
+Traceback (most recent call last):
+  File "/home/python/anaconda3/envs/anaconda_scrapy/lib/python3.6/site-packages/parsel/selector.py", line 222, in xpath
+    **kwargs)
+  File "src/lxml/etree.pyx", line 1589, in lxml.etree._Element.xpath (src/lxml/etree.c:61238)
+  File "src/lxml/xpath.pxi", line 307, in lxml.etree.XPathElementEvaluator.__call__ (src/lxml/etree.c:178777)
+  File "src/lxml/xpath.pxi", line 227, in lxml.etree._XPathEvaluatorBase._handle_result (src/lxml/etree.c:177729)
+lxml.etree.XPathEvalError: Invalid expression
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/python/anaconda3/envs/anaconda_scrapy/lib/python3.6/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/home/python/anaconda3/envs/anaconda_scrapy/lib/python3.6/site-packages/scrapy/spidermiddlewares/offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "/home/python/anaconda3/envs/anaconda_scrapy/lib/python3.6/site-packages/scrapy/spidermiddlewares/referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/home/python/anaconda3/envs/anaconda_scrapy/lib/python3.6/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/python/anaconda3/envs/anaconda_scrapy/lib/python3.6/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/python/anaconda3/envs/anaconda_scrapy/lib/python3.6/site-packages/scrapy/spiders/crawl.py", line 78, in _parse_response
+    for requests_or_item in iterate_spider_output(cb_res):
+  File "/home/python/Desktop/python/Spider/tengxun/tengxun/spiders/tencent.py", line 26, in parse_item
+    temp['position'] = item.xpath(".//td[1]/a/texx()").extract_first()
+  File "/home/python/anaconda3/envs/anaconda_scrapy/lib/python3.6/site-packages/parsel/selector.py", line 226, in xpath
+    six.reraise(ValueError, ValueError(msg), sys.exc_info()[2])
+  File "/home/python/anaconda3/envs/anaconda_scrapy/lib/python3.6/site-packages/six.py", line 692, in reraise
+    raise value.with_traceback(tb)
+  File "/home/python/anaconda3/envs/anaconda_scrapy/lib/python3.6/site-packages/parsel/selector.py", line 222, in xpath
+    **kwargs)
+  File "src/lxml/etree.pyx", line 1589, in lxml.etree._Element.xpath (src/lxml/etree.c:61238)
+  File "src/lxml/xpath.pxi", line 307, in lxml.etree.XPathElementEvaluator.__call__ (src/lxml/etree.c:178777)
+  File "src/lxml/xpath.pxi", line 227, in lxml.etree._XPathEvaluatorBase._handle_result (src/lxml/etree.c:177729)
+ValueError: XPath error: Invalid expression in .//td[1]/a/texx()
